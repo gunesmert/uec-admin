@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D70FE4225C89644003C0403 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D70FE4125C89644003C0403 /* UserDefaultsManager.swift */; };
+		0D845BA125C88C98007DAB16 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D845BA025C88C98007DAB16 /* DataManager.swift */; };
+		0D845BA425C8903B007DAB16 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D845BA325C8903B007DAB16 /* BaseTableViewController.swift */; };
+		0D845BAA25C890E6007DAB16 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D845BA925C890E6007DAB16 /* Identifiable.swift */; };
+		0D845BB025C8926B007DAB16 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D845BAF25C8926B007DAB16 /* HomeViewCell.swift */; };
 		0DD05B7E25C3437C0045FC4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD05B7D25C3437C0045FC4F /* AppDelegate.swift */; };
 		0DD05B8025C3437C0045FC4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD05B7F25C3437C0045FC4F /* SceneDelegate.swift */; };
 		0DD05B8725C3437D0045FC4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DD05B8625C3437D0045FC4F /* Assets.xcassets */; };
@@ -14,12 +19,16 @@
 		0DD05BA825C347DF0045FC4F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD05BA725C347DF0045FC4F /* HomeViewController.swift */; };
 		0DD05BAF25C34B6E0045FC4F /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD05BAE25C34B6E0045FC4F /* BaseNavigationController.swift */; };
 		0DD05BB225C34BA70045FC4F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD05BB125C34BA70045FC4F /* BaseViewController.swift */; };
-		0DD05BB625C351870045FC4F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD05BB525C351870045FC4F /* HomeView.swift */; };
 		0DD05BBA25C354DF0045FC4F /* BaseScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD05BB925C354DF0045FC4F /* BaseScrollViewController.swift */; };
 		0DD05BBE25C3571E0045FC4F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0DD05BBD25C3571E0045FC4F /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D70FE4125C89644003C0403 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		0D845BA025C88C98007DAB16 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		0D845BA325C8903B007DAB16 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		0D845BA925C890E6007DAB16 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		0D845BAF25C8926B007DAB16 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		0DD05B7A25C3437C0045FC4F /* uec-admin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "uec-admin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DD05B7D25C3437C0045FC4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DD05B7F25C3437C0045FC4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +38,6 @@
 		0DD05BA725C347DF0045FC4F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0DD05BAE25C34B6E0045FC4F /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		0DD05BB125C34BA70045FC4F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		0DD05BB525C351870045FC4F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0DD05BB925C354DF0045FC4F /* BaseScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScrollViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -45,6 +53,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D845B9F25C88B8C007DAB16 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0D845BA025C88C98007DAB16 /* DataManager.swift */,
+				0D70FE4125C89644003C0403 /* UserDefaultsManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0D845BA725C890C3007DAB16 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0D845BA925C890E6007DAB16 /* Identifiable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0D845BAC25C89129007DAB16 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				0DD05B8B25C3437D0045FC4F /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		0D845BB225C89282007DAB16 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0D845BAF25C8926B007DAB16 /* HomeViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0DD05B7125C3437C0045FC4F = {
 			isa = PBXGroup;
 			children = (
@@ -65,9 +106,10 @@
 			isa = PBXGroup;
 			children = (
 				0DD05BAC25C34B2E0045FC4F /* Base */,
-				0DD05BA425C3467D0045FC4F /* Resources */,
+				0D845BA725C890C3007DAB16 /* Extensions */,
 				0DD05BA125C346660045FC4F /* Modules */,
-				0DD05B8B25C3437D0045FC4F /* Info.plist */,
+				0DD05BA425C3467D0045FC4F /* Resources */,
+				0D845BAC25C89129007DAB16 /* Support */,
 			);
 			path = "uec-admin";
 			sourceTree = "<group>";
@@ -75,8 +117,9 @@
 		0DD05BA125C346660045FC4F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				0DD05BA625C346AD0045FC4F /* Home */,
 				0DD05BA225C3466B0045FC4F /* Application */,
+				0D845B9F25C88B8C007DAB16 /* Data */,
+				0DD05BA625C346AD0045FC4F /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -110,7 +153,7 @@
 		0DD05BA625C346AD0045FC4F /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				0DD05BB425C351740045FC4F /* Views */,
+				0D845BB225C89282007DAB16 /* Views */,
 				0DD05BA725C347DF0045FC4F /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -121,17 +164,10 @@
 			children = (
 				0DD05BAE25C34B6E0045FC4F /* BaseNavigationController.swift */,
 				0DD05BB925C354DF0045FC4F /* BaseScrollViewController.swift */,
+				0D845BA325C8903B007DAB16 /* BaseTableViewController.swift */,
 				0DD05BB125C34BA70045FC4F /* BaseViewController.swift */,
 			);
 			path = Base;
-			sourceTree = "<group>";
-		};
-		0DD05BB425C351740045FC4F /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				0DD05BB525C351870045FC4F /* HomeView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,11 +245,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D845BA425C8903B007DAB16 /* BaseTableViewController.swift in Sources */,
 				0DD05BB225C34BA70045FC4F /* BaseViewController.swift in Sources */,
+				0D845BA125C88C98007DAB16 /* DataManager.swift in Sources */,
+				0D845BAA25C890E6007DAB16 /* Identifiable.swift in Sources */,
+				0D70FE4225C89644003C0403 /* UserDefaultsManager.swift in Sources */,
 				0DD05BAF25C34B6E0045FC4F /* BaseNavigationController.swift in Sources */,
 				0DD05B7E25C3437C0045FC4F /* AppDelegate.swift in Sources */,
-				0DD05BB625C351870045FC4F /* HomeView.swift in Sources */,
 				0DD05BBA25C354DF0045FC4F /* BaseScrollViewController.swift in Sources */,
+				0D845BB025C8926B007DAB16 /* HomeViewCell.swift in Sources */,
 				0DD05B8025C3437C0045FC4F /* SceneDelegate.swift in Sources */,
 				0DD05BA825C347DF0045FC4F /* HomeViewController.swift in Sources */,
 			);
@@ -356,7 +396,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E6K2WVN974;
-				INFOPLIST_FILE = "uec-admin/Info.plist";
+				INFOPLIST_FILE = "uec-admin/Support/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -376,7 +416,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E6K2WVN974;
-				INFOPLIST_FILE = "uec-admin/Info.plist";
+				INFOPLIST_FILE = "uec-admin/Support/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
