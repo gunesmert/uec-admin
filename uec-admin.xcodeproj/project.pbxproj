@@ -12,6 +12,9 @@
 		0D845BA425C8903B007DAB16 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D845BA325C8903B007DAB16 /* BaseTableViewController.swift */; };
 		0D845BAA25C890E6007DAB16 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D845BA925C890E6007DAB16 /* Identifiable.swift */; };
 		0D845BB025C8926B007DAB16 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D845BAF25C8926B007DAB16 /* HomeViewCell.swift */; };
+		0DA1018225D1D644002DE366 /* timezones.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DA1018125D1D644002DE366 /* timezones.json */; };
+		0DA1018525D1D6BE002DE366 /* TimeZoneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA1018425D1D6BE002DE366 /* TimeZoneManager.swift */; };
+		0DA1018825D1DA4B002DE366 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA1018725D1DA4B002DE366 /* StringExtensions.swift */; };
 		0DD05B7E25C3437C0045FC4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD05B7D25C3437C0045FC4F /* AppDelegate.swift */; };
 		0DD05B8025C3437C0045FC4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD05B7F25C3437C0045FC4F /* SceneDelegate.swift */; };
 		0DD05B8725C3437D0045FC4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DD05B8625C3437D0045FC4F /* Assets.xcassets */; };
@@ -29,6 +32,9 @@
 		0D845BA325C8903B007DAB16 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		0D845BA925C890E6007DAB16 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		0D845BAF25C8926B007DAB16 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
+		0DA1018125D1D644002DE366 /* timezones.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = timezones.json; sourceTree = "<group>"; };
+		0DA1018425D1D6BE002DE366 /* TimeZoneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneManager.swift; sourceTree = "<group>"; };
+		0DA1018725D1DA4B002DE366 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		0DD05B7A25C3437C0045FC4F /* uec-admin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "uec-admin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DD05B7D25C3437C0045FC4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DD05B7F25C3437C0045FC4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +64,7 @@
 			children = (
 				0D845BA025C88C98007DAB16 /* DataManager.swift */,
 				0D70FE4125C89644003C0403 /* UserDefaultsManager.swift */,
+				0DA1018425D1D6BE002DE366 /* TimeZoneManager.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -66,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				0D845BA925C890E6007DAB16 /* Identifiable.swift */,
+				0DA1018725D1DA4B002DE366 /* StringExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -146,6 +154,7 @@
 			children = (
 				0DD05B8625C3437D0045FC4F /* Assets.xcassets */,
 				0DD05B8825C3437D0045FC4F /* LaunchScreen.storyboard */,
+				0DA1018125D1D644002DE366 /* timezones.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -235,6 +244,7 @@
 			files = (
 				0DD05B8A25C3437D0045FC4F /* LaunchScreen.storyboard in Resources */,
 				0DD05B8725C3437D0045FC4F /* Assets.xcassets in Resources */,
+				0DA1018225D1D644002DE366 /* timezones.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,10 +261,12 @@
 				0D845BAA25C890E6007DAB16 /* Identifiable.swift in Sources */,
 				0D70FE4225C89644003C0403 /* UserDefaultsManager.swift in Sources */,
 				0DD05BAF25C34B6E0045FC4F /* BaseNavigationController.swift in Sources */,
+				0DA1018525D1D6BE002DE366 /* TimeZoneManager.swift in Sources */,
 				0DD05B7E25C3437C0045FC4F /* AppDelegate.swift in Sources */,
 				0DD05BBA25C354DF0045FC4F /* BaseScrollViewController.swift in Sources */,
 				0D845BB025C8926B007DAB16 /* HomeViewCell.swift in Sources */,
 				0DD05B8025C3437C0045FC4F /* SceneDelegate.swift in Sources */,
+				0DA1018825D1DA4B002DE366 /* StringExtensions.swift in Sources */,
 				0DD05BA825C347DF0045FC4F /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
