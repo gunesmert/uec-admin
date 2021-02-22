@@ -1,11 +1,11 @@
 import Foundation
 
 protocol UserDefaultsManagerType: AnyObject {
-	func getSelectedCountryIdentifiers() -> [String]
+	func getSelectedTimeZoneIdentifiers() -> [String]
 	func getStreamDescription() -> String?
 	func getChannelURLString() -> String?
 	
-	func setSelectedCountryIdentifiers(_ identifiers: [String])
+	func setSelectedTimeZoneIdentifiers(_ identifiers: [String])
 	func setStreamDescription(_ description: String)
 	func setChannelURLString(_ urlString: String)
 }
@@ -13,8 +13,18 @@ protocol UserDefaultsManagerType: AnyObject {
 class UserDefaultsManager: UserDefaultsManagerType {
 	private let userDefaults = UserDefaults.standard
 	
-	func getSelectedCountryIdentifiers() -> [String] {
-		return (userDefaults.array(forKey: DataType.countryIdentifiers.rawValue) as? [String]) ?? []
+	func getSelectedTimeZoneIdentifiers() -> [String] {
+		guard let identifiers = userDefaults.array(forKey: DataType.timeZoneIdentifiers.rawValue) as? [String], !identifiers.isEmpty else {
+			return [
+				"Europe/Amsterdam",
+				"Europe/Berlin",
+				"Europe/Helsinki",
+				"Europe/Istanbul",
+				"America/Los_Angeles"
+			]
+		}
+	
+		return identifiers
 	}
 	
 	func getStreamDescription() -> String? {
@@ -25,8 +35,8 @@ class UserDefaultsManager: UserDefaultsManagerType {
 		return userDefaults.string(forKey: DataType.channelURLString.rawValue)
 	}
 	
-	func setSelectedCountryIdentifiers(_ identifiers: [String]) {
-		userDefaults.set(identifiers, forKey: DataType.countryIdentifiers.rawValue)
+	func setSelectedTimeZoneIdentifiers(_ identifiers: [String]) {
+		userDefaults.set(identifiers, forKey: DataType.timeZoneIdentifiers.rawValue)
 	}
 	
 	func setStreamDescription(_ description: String) {
@@ -40,7 +50,7 @@ class UserDefaultsManager: UserDefaultsManagerType {
 
 private extension UserDefaultsManager {
 	enum DataType: String {
-		case countryIdentifiers
+		case timeZoneIdentifiers
 		case streamDescription
 		case channelURLString
 	}

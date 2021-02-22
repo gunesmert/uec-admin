@@ -15,6 +15,9 @@
 		0DA1018225D1D644002DE366 /* timezones.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DA1018125D1D644002DE366 /* timezones.json */; };
 		0DA1018525D1D6BE002DE366 /* TimeZoneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA1018425D1D6BE002DE366 /* TimeZoneManager.swift */; };
 		0DA1018825D1DA4B002DE366 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA1018725D1DA4B002DE366 /* StringExtensions.swift */; };
+		0DC45E3725D5B171001D462D /* TimeZonesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC45E3625D5B171001D462D /* TimeZonesViewController.swift */; };
+		0DC45E3B25D5B1D6001D462D /* TimeZonesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC45E3A25D5B1D6001D462D /* TimeZonesViewModel.swift */; };
+		0DC45E3F25D5B2ED001D462D /* TimeZoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC45E3E25D5B2ED001D462D /* TimeZoneCell.swift */; };
 		0DD05B7E25C3437C0045FC4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD05B7D25C3437C0045FC4F /* AppDelegate.swift */; };
 		0DD05B8025C3437C0045FC4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD05B7F25C3437C0045FC4F /* SceneDelegate.swift */; };
 		0DD05B8725C3437D0045FC4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DD05B8625C3437D0045FC4F /* Assets.xcassets */; };
@@ -24,6 +27,7 @@
 		0DD05BB225C34BA70045FC4F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD05BB125C34BA70045FC4F /* BaseViewController.swift */; };
 		0DD05BBA25C354DF0045FC4F /* BaseScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD05BB925C354DF0045FC4F /* BaseScrollViewController.swift */; };
 		0DD05BBE25C3571E0045FC4F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0DD05BBD25C3571E0045FC4F /* SnapKit */; };
+		0DE9CE3D25DAFC170050DFC3 /* TimeZoneHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9CE3C25DAFC170050DFC3 /* TimeZoneHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,9 @@
 		0DA1018125D1D644002DE366 /* timezones.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = timezones.json; sourceTree = "<group>"; };
 		0DA1018425D1D6BE002DE366 /* TimeZoneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneManager.swift; sourceTree = "<group>"; };
 		0DA1018725D1DA4B002DE366 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		0DC45E3625D5B171001D462D /* TimeZonesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZonesViewController.swift; sourceTree = "<group>"; };
+		0DC45E3A25D5B1D6001D462D /* TimeZonesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZonesViewModel.swift; sourceTree = "<group>"; };
+		0DC45E3E25D5B2ED001D462D /* TimeZoneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneCell.swift; sourceTree = "<group>"; };
 		0DD05B7A25C3437C0045FC4F /* uec-admin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "uec-admin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DD05B7D25C3437C0045FC4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DD05B7F25C3437C0045FC4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +52,7 @@
 		0DD05BAE25C34B6E0045FC4F /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		0DD05BB125C34BA70045FC4F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		0DD05BB925C354DF0045FC4F /* BaseScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScrollViewController.swift; sourceTree = "<group>"; };
+		0DE9CE3C25DAFC170050DFC3 /* TimeZoneHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,25 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		0DC45E3525D5B01F001D462D /* TimeZone */ = {
+			isa = PBXGroup;
+			children = (
+				0DC45E3D25D5B2DB001D462D /* Views */,
+				0DC45E3625D5B171001D462D /* TimeZonesViewController.swift */,
+				0DC45E3A25D5B1D6001D462D /* TimeZonesViewModel.swift */,
+			);
+			path = TimeZone;
+			sourceTree = "<group>";
+		};
+		0DC45E3D25D5B2DB001D462D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0DC45E3E25D5B2ED001D462D /* TimeZoneCell.swift */,
+				0DE9CE3C25DAFC170050DFC3 /* TimeZoneHeaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0DD05B7125C3437C0045FC4F = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +155,7 @@
 				0DD05BA225C3466B0045FC4F /* Application */,
 				0D845B9F25C88B8C007DAB16 /* Data */,
 				0DD05BA625C346AD0045FC4F /* Home */,
+				0DC45E3525D5B01F001D462D /* TimeZone */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -259,12 +287,16 @@
 				0DD05BB225C34BA70045FC4F /* BaseViewController.swift in Sources */,
 				0D845BA125C88C98007DAB16 /* DataManager.swift in Sources */,
 				0D845BAA25C890E6007DAB16 /* Identifiable.swift in Sources */,
+				0DE9CE3D25DAFC170050DFC3 /* TimeZoneHeaderView.swift in Sources */,
 				0D70FE4225C89644003C0403 /* UserDefaultsManager.swift in Sources */,
 				0DD05BAF25C34B6E0045FC4F /* BaseNavigationController.swift in Sources */,
 				0DA1018525D1D6BE002DE366 /* TimeZoneManager.swift in Sources */,
 				0DD05B7E25C3437C0045FC4F /* AppDelegate.swift in Sources */,
+				0DC45E3F25D5B2ED001D462D /* TimeZoneCell.swift in Sources */,
 				0DD05BBA25C354DF0045FC4F /* BaseScrollViewController.swift in Sources */,
+				0DC45E3725D5B171001D462D /* TimeZonesViewController.swift in Sources */,
 				0D845BB025C8926B007DAB16 /* HomeViewCell.swift in Sources */,
+				0DC45E3B25D5B1D6001D462D /* TimeZonesViewModel.swift in Sources */,
 				0DD05B8025C3437C0045FC4F /* SceneDelegate.swift in Sources */,
 				0DA1018825D1DA4B002DE366 /* StringExtensions.swift in Sources */,
 				0DD05BA825C347DF0045FC4F /* HomeViewController.swift in Sources */,

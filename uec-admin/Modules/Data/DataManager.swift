@@ -1,20 +1,26 @@
 import Foundation
 
 protocol DataManagerType: AnyObject {
-	var selectedCountryIdentifiers: [String] { get }
+	var selectedTimeZoneIdentifiers: [String] { get }
 	var streamDescription: String? { get }
 	var channelURLString: String? { get }
 }
 
 class DataManager: DataManagerType {
-	var selectedCountryIdentifiers: [String] = []
+	static let shared = DataManager()
+	
+	var selectedTimeZoneIdentifiers: [String] = []
 	var streamDescription: String?
 	var channelURLString: String?
 	
 	private let userDefaultsManager = UserDefaultsManager()
 	
 	init() {
-		selectedCountryIdentifiers = userDefaultsManager.getSelectedCountryIdentifiers()
+		reload()
+	}
+	
+	func reload() {
+		selectedTimeZoneIdentifiers = userDefaultsManager.getSelectedTimeZoneIdentifiers()
 		streamDescription = userDefaultsManager.getStreamDescription()
 		channelURLString = userDefaultsManager.getChannelURLString()
 	}

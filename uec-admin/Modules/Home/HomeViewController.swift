@@ -1,13 +1,11 @@
 import UIKit
 
 class HomeViewController: BaseTableViewController {
-	private let dataManager = DataManager()
-	
 	override func loadView() {
 		super.loadView()
 		
 		tableView.register(
-			UITableViewCell.self,
+			HomeViewCell.self,
 			forCellReuseIdentifier: HomeViewCell.identifier)
 	}
 	
@@ -19,7 +17,20 @@ class HomeViewController: BaseTableViewController {
 
 // MARK: - UITableViewDelegate
 extension HomeViewController {
-	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { }
+	override func tableView(
+		_ tableView: UITableView,
+		didSelectRowAt indexPath: IndexPath) {
+		let section = Section.allCases[indexPath.section]
+		
+		switch section {
+		case .countries:
+			displayTimeZonesViewController()
+		case .description:
+			break
+		case .link:
+			break
+		}
+	}
 }
 
 // MARK: - UITableViewDataSource
@@ -44,12 +55,12 @@ extension HomeViewController {
 			
 			switch section {
 			case .countries:
-				let identifiers = dataManager.selectedCountryIdentifiers
-				return identifiers.isEmpty ? section.placeholder : identifiers.joined(separator: ", ")
+				let identifiers = DataManager.shared.selectedTimeZoneIdentifiers
+				return identifiers.isEmpty ? section.placeholder : identifiers.joined(separator: "\n")
 			case .description:
-				return dataManager.streamDescription ?? section.placeholder
+				return DataManager.shared.streamDescription ?? section.placeholder
 			case .link:
-				return dataManager.channelURLString ?? section.placeholder
+				return DataManager.shared.channelURLString ?? section.placeholder
 			}
 		}()
 		
@@ -74,5 +85,18 @@ private extension HomeViewController {
 				return "+ Add links"
 			}
 		}
+	}
+	
+	func displayTimeZonesViewController() {
+		let controller = TimeZonesViewController()
+		controller.delegate = self
+		let navController = BaseNavigationController(rootViewController: controller)
+		navigationController?.present(navController, animated: true)
+	}
+}
+
+extension HomeViewController: TimeZonesViewControllerDelegate {
+	func didUpdateTimeZones() {
+		tableView.reloadData()
 	}
 }
