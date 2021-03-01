@@ -19,6 +19,7 @@ class UserDefaultsManager: UserDefaultsManagerType {
 				"Europe/Amsterdam",
 				"Europe/Berlin",
 				"Europe/Helsinki",
+				"Europe/Sofia",
 				"Europe/Istanbul",
 				"America/Los_Angeles"
 			]

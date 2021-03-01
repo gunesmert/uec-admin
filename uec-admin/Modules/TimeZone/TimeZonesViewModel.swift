@@ -11,7 +11,11 @@ class TimeZonesViewModel {
 	
 	var visibleSections: [TimeZoneSection] {
 		if isEditing {
-			return availableSections
+			if currentFilterText.isEmpty {
+				return availableSections
+			}
+			
+			return filteredSections
 		} else {
 			return selectedSections
 		}
@@ -19,6 +23,7 @@ class TimeZonesViewModel {
 	
 	var availableSections: [TimeZoneSection] = []
 	var selectedSections: [TimeZoneSection] = []
+	var filteredSections: [TimeZoneSection] = []
 	var selectedTimeZoneIdentifiers: [String]
 	
 	private var currentSections: [TimeZoneSection] {
@@ -26,8 +31,22 @@ class TimeZonesViewModel {
 	}
 	
 	var currentTimeZoneIndex: Int?
-	var isEditing: Bool = false
+	var isEditing: Bool = false {
+		didSet {
+			if oldValue , !isEditing {
+				currentFilterText = ""
+			}
+		}
+	}
+	
 	var selectedDate: Date = Date()
+	var currentFilterText: String = "" {
+		didSet {
+			if oldValue == currentFilterText { return }
+			
+			filterSections()
+		}
+	}
 	
 	init() {
 		selectedTimeZoneIdentifiers = DataManager.shared.selectedTimeZoneIdentifiers
@@ -84,6 +103,23 @@ class TimeZonesViewModel {
 		
 		currentTimeZoneIndex = selectedSections.firstIndex {
 			$0.abbreviation == abbreviation
+		}
+	}
+	
+	private func filterSections() {
+		filteredSections = []
+		
+		if currentFilterText.isEmpty { return }
+		
+		for section in availableSections {
+			let filteredTimezones = section.timeZones.filter {
+				$0.timeZone.identifier.lowercased().contains(currentFilterText.lowercased())
+			}
+			
+			if filteredTimezones.isEmpty { continue }
+			
+			filteredSections.append(section)
+			filteredSections[filteredSections.count - 1].timeZones = filteredTimezones
 		}
 	}
 	

@@ -9,6 +9,7 @@ struct CustomTimeZone: Decodable {
 	let decodableTimeZone: DecodableTimeZone
 	let timeZone: TimeZone
 	let abbreviation: String
+	let formattedTimeZoneIdentifier: String
 	
 	init?(decodableTimeZone: DecodableTimeZone) {
 		guard let timeZone = TimeZone(identifier: decodableTimeZone.name),
@@ -17,6 +18,11 @@ struct CustomTimeZone: Decodable {
 		self.decodableTimeZone = decodableTimeZone
 		self.timeZone = timeZone
 		self.abbreviation = abbreviation
+		
+		var identifier = decodableTimeZone.name
+		identifier = identifier.replacingOccurrences(of: "/", with: " - ")
+		identifier = identifier.replacingOccurrences(of: "_", with: " ")
+		self.formattedTimeZoneIdentifier = identifier
 	}
 }
 

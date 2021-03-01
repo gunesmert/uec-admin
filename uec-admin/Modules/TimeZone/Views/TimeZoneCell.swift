@@ -5,7 +5,7 @@ class TimeZoneCell: UITableViewCell {
 	lazy var titleLabel: UILabel = {
 		let label = UILabel()
 		label.font = UIFont.preferredFont(forTextStyle: .title2)
-		label.textColor = .darkText
+		label.textColor = .label
 		return label
 	}()
 	

@@ -12,7 +12,7 @@ class TimeZoneHeaderView: UITableViewHeaderFooterView {
 	let timeZoneLabel: UILabel = {
 		let label = UILabel()
 		label.font = UIFont.preferredFont(forTextStyle: .subheadline)
-		label.textColor = UIColor.darkText.withAlphaComponent(0.7)
+		label.textColor = UIColor.secondaryLabel.withAlphaComponent(0.7)
 		label.textAlignment = .right
 		label.numberOfLines = 0
 		

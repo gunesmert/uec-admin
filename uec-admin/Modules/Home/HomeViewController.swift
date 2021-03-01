@@ -7,6 +7,7 @@ class HomeViewController: BaseTableViewController {
 		tableView.register(
 			HomeViewCell.self,
 			forCellReuseIdentifier: HomeViewCell.identifier)
+		tableView.tableFooterView = UIView()
 	}
 	
 	override func viewDidLoad() {
